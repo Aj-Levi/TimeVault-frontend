@@ -9,6 +9,8 @@ import Contribute from "./components/ContributionPage/Contribute";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import toast, { Toaster } from 'react-hot-toast';
+import ProfilePage from "./pages/ProfilePage";
+import Leaderboard from "./pages/Leaderboard";
 function App() {
   return (
     <>
@@ -22,6 +24,8 @@ function App() {
           <Route path="/contribute" element={<Contribute />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
         </Route>
       </Routes>
     </>
