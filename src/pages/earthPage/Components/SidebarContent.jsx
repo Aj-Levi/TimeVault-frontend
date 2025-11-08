@@ -174,14 +174,27 @@ export function SidebarContent({ selectedCountry, date }) {
 
                   {event.eventTags.length > 0 && (
                     <div className="flex flex-wrap gap-1">
-                      {event.eventTags.slice(0, 4).map((tag, tagIndex) => (
-                        <div
-                          key={tagIndex}
-                          className="badge badge-primary badge-sm"
-                        >
-                          {tag}
-                        </div>
-                      ))}
+                      {event.eventTags.slice(0, 4).map((tag, tagIndex) => {
+                        // Define different badge colors
+                        const badgeColors = [
+                          "badge-primary",
+                          "badge-secondary",
+                          "badge-accent",
+                          "badge-info",
+                        ];
+                        // Use modulo to cycle through colors
+                        const colorClass =
+                          badgeColors[tagIndex % badgeColors.length];
+
+                        return (
+                          <div
+                            key={tagIndex}
+                            className={`badge ${colorClass} badge-sm`}
+                          >
+                            {tag}
+                          </div>
+                        );
+                      })}
                       {event.eventTags.length > 4 && (
                         <div className="badge badge-ghost badge-sm">
                           +{event.eventTags.length - 4} more

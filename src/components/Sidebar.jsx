@@ -1,7 +1,7 @@
 import React from "react";
 import { useZustandStore } from "../ZustandStore.js";
 import { MdOutlineExplore } from "react-icons/md";
-import { FaGlobeAmericas } from "react-icons/fa";
+import { FaGlobeAmericas, FaTrophy } from "react-icons/fa";
 import { LuNewspaper } from "react-icons/lu";
 
 const Sidebar = () => {
@@ -66,6 +66,15 @@ const Sidebar = () => {
                   >
                     <LuNewspaper size={18} />
                     <span>Contribute</span>
+                  </button>
+                </li>
+                <li onClick={(e) => closeSidebar(e)}>
+                  <button
+                    onClick={() => handleNavigation("/leaderboard")}
+                    className="flex items-center gap-3 w-full text-left"
+                  >
+                    <FaTrophy size={18} />
+                    <span>Top Contributors</span>
                   </button>
                 </li>
               </ul>

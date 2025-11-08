@@ -171,6 +171,7 @@ const MostViewedEvents = ({ title = "Most Viewed Events" }) => {
                   endDate={event.coreInfo.endDate}
                   tags={event.coreInfo.eventTags}
                   image={images[index%4]}
+                  id={event._id}
                 />
               </div>
             ))}

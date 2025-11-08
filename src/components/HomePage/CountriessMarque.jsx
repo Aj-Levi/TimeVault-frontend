@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const brands = [
-  { id: 1, name: "Nike", logo: "/HomeFavicon.png" },
-  { id: 2, name: "Adidas", logo: "/HomeFavicon.png" },
-  { id: 3, name: "Gucci", logo: "/HomeFavicon.png" },
-  { id: 4, name: "Prada", logo: "/HomeFavicon.png" },
-  { id: 6, name: "Zara", logo: "/HomeFavicon.png" },
-  { id: 7, name: "H&M", logo: "/HomeFavicon.png" },
+  { id: 1, name: "India", logo: "/Flags/India.png" },
+  { id: 2, name: "Japan", logo: "/Flags/Japan.png" },
+  { id: 3, name: "Mexico", logo: "/Flags/Mexico.png" },
+  { id: 4, name: "USA", logo: "/Flags/USA.png" },
+  { id: 6, name: "France", logo: "/Flags/France.png" },
+  { id: 7, name: "England", logo: "/Flags/England.jpg" },
 ];
 
 const BrandsMarque = ({ title = "Expore by Countries" }) => {
@@ -54,7 +54,7 @@ const BrandsMarque = ({ title = "Expore by Countries" }) => {
   };
 
   return (
-    <section className="py-8 bg-base-200">
+    <section id="featured" className="py-8 bg-base-200">
       {title && (
         <h2 className="text-2xl md:text-3xl font-bold mb-12 underline underline-offset-8 decoration-base-content text-primary text-center">{title}</h2>
       )}
@@ -64,7 +64,7 @@ const BrandsMarque = ({ title = "Expore by Countries" }) => {
           {[...brands, ...brands].map((brand, index) => (
             <div key={`${brand.id}-${index}`} className="px-4">
               <div className="flex flex-col items-center cursor-pointer group">
-                <div className="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-xl mb-3 transition-all duration-300 relative overflow-hidden">
+                <div className="w-20 h-20 flex items-center justify-center  rounded-full shadow-md hover:shadow-xl mb-3 transition-all duration-300 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gray-900 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                   <img
                     src={brand.logo}
